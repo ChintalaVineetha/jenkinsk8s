@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: jenkinsapp-service
 spec:
-      containers:
-      - name: "springcontsep13"
-        image: "my-spring-appsep13" 
-        ports:
-            - containerPort: 8080
-  
+  selector:
+    app: jenkinsapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
