@@ -1,0 +1,6 @@
+app: v1
+kind: Service
+metadata:
+  name: jenkinsapp-service
+spec:
+  
