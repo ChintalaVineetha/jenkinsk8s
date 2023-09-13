@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkinsapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkinsapp
+  template:
+    metadata:
+      labels:
+        app: jenkinsapp
+    spec:
+      containers:
+      - name: "springcontsep13"
+        image: "my-spring-appsep13" 
+        ports:
+            - containerPort: 8080
+
+          
